@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Home */
+.section {
+  @apply h-screen w-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-black to-blue-900 text-white;
+}
+
+.section-title {
+  @apply text-4xl font-bold;
+}
+
+/* Mood Modal */
+.container {
+  @apply fixed inset-0 bg-black/80 backdrop-blur-md flex flex-col items-center justify-center z-50;
+}
+
+.title {
+  @apply text-3xl lg:text-5xl font-bold text-white mb-7;
+}
+
+.mood-modal {
+  @apply flex flex-wrap gap-6 justify-center;
+}
+
+.mood-btn {
+  @apply bg-purple-700 hover:bg-purple-500 text-white px-6 py-4 lg:px-8 lg:py-6 rounded-2xl text-lg md:text-xl shadow-lg transform hover:scale-105 transition-all cursor-pointer;
+}
+
+.skip-btn {
+  @apply mt-8 text-gray-300 hover:text-white text-xl border-2 px-6 py-3 rounded-2xl hover:bg-purple-700/30 hover:border-purple-700 cursor-pointer;
+}
