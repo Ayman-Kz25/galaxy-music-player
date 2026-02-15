@@ -1,6 +1,6 @@
 import React from "react";
 
-function GalaxyView({ songs, currentIndex }) {
+function GalaxyView({ songs, currentIndex, onSelectSong }) {
   const galaxyRadius = 200;
   const centerX = 0;
   const centerY = 0;
@@ -18,9 +18,9 @@ function GalaxyView({ songs, currentIndex }) {
           return (
             <div
               key={song.id}
-              className={`absolute w-16 h-16 rounded-full bg-purple-500 shadow-[0_0_20px_#a78bfa] flex items-center justify-center text-white cursor-pointer ${isActive ? "animate-spin-slow scale-110" : ""}
-            transform transition-all duration-500`}
-              style={{ transform: `translate(${x}px, ${y}px)` }}
+              className={`absolute w-16 h-16 rounded-full flex items-center justify-center text-white cursor-pointer transform transition-all duration-500 hover:scale-110 hover:shadow-[0_0_30px_var(--accent-glow)]  ${isActive ? "animate-spin-slow scale-110 shadow-[0_0_40px_var(--accent-glow)]" : ""}
+            `}
+              style={{ transform: `translate(${x}px, ${y}px)`, backgroundColor: "var(--accent)", }}
             >
               {song.title[0]}
             </div>
