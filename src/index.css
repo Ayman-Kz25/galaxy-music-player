@@ -24,6 +24,10 @@
   @apply text-4xl font-bold;
 }
 
+.box {
+  @apply absolute inset-0 flex items-center justify-center text-white;
+}
+
 /* Mood Modal */
 .container {
   @apply fixed inset-0 bg-black/80 backdrop-blur-md flex flex-col items-center justify-center z-50;
